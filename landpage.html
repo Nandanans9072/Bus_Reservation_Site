@@ -1,0 +1,136 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/landpage.css">
+    <title>Ticket Booking</title>   
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Journey Sync</h1>
+        </div>
+        <div class="links">
+            <div class="link" data-aos="fade-up" data-aos-duration="1200"><a href="#home">Home</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1200"><a href="review.html">Review</a></div>
+            <div class="link" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="100"><a href="#about">About</a></div>
+           
+            <div class="link" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600"><a href="#contact">Contact</a></div>
+        </div>
+        <div class="buttons">
+            <button data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800" onclick="handleLogin()">Login</a></button>
+            <button data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900" onclick="handleSign()">Sign up</button>
+            <button data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900" onclick="handleAdmin()">Admin</button>
+        </div>
+    </nav>
+    <section>
+        <div class="content">
+            <h1 data-aos="fade-right" data-aos-duration="2000" data-aos-delay="900">Your Safe Travel Journey Is Our Main Goal</h1>
+            <p data-aos="fade-left" data-aos-duration="2000" data-aos-delay="1000"></p> 
+            <!--<button data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="1200">GET YOUR TICKET</button>-->
+        </div>
+    </section>
+  <section id="about"class="about-content">
+      <div class="left">
+          <img src="data/logo black.png" alt="About Image" class="about-image">
+      </div>
+      <div class="right">
+          <div class="about-item">
+              <h2>Our Mission</h2>
+              <p>At Bus Booking, our mission is to provide a seamless and convenient journey for all our customers. We strive to make bus travel an enjoyable experience by offering a user-friendly platform, reliable service, and unparalleled customer support.</p>
+          </div>
+          <div class="about-item">
+              <h2>Our Story</h2>
+              <p>Bus Booking was founded in 2010 with the vision of revolutionizing the way people book and travel by bus. Over the years, we have grown into a trusted brand, connecting millions of travelers with the best bus operators across the country. Our dedication to customer satisfaction and innovation has been the driving force behind our success.</p>
+          </div>
+          <div class="about-item">
+              <h2>Our Team</h2>
+              <p>We are a team of passionate individuals who share a love for travel and technology. Our talented developers, designers, and customer support staff work tirelessly to ensure a seamless booking experience and provide exceptional service to our customers.</p>
+          </div>
+      </div>
+  </section>
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p>Have a question or need assistance? Feel free to reach out to us.</p>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i> chengannur,kerala</li>
+                    <li><i class="fa fa-phone"></i> +1 1234567899</li>
+                    <li><i class="fa fa-envelope"></i> info@journeysync.com</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h3>Send a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+     <script>
+        function handleLogin() {
+            location.href='login.html';
+          // Add your login functionality here
+          console.log('Login button clicked');
+        }
+        function handleSign() {
+            location.href='login.html';
+          // Add your login functionality here
+          console.log('Sign up button clicked');
+        }
+        function handleAdmin() {
+            location.href='adminLogin.html';
+          // Add your login functionality here
+          console.log('admin up button clicked');
+        }
+        function handleTicket() {
+            location.href='ticket.html';
+          // Add your ticket functionality here
+          console.log('Get your ticket button clicked');
+        }
+
+        // Get the "About" section element
+const aboutSection = document.getElementById('about');
+
+// Get the "About" link element
+const aboutLink = document.querySelector('.links .link a[href="#about"]');
+
+// Add a click event listener to the "About" link
+aboutLink.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default link behavior
+    aboutSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the "About" section
+});
+
+const contactSection = document.getElementById('contact');
+
+// Get the "Contact" link element
+const contactLink = document.querySelector('.links .link a[href="#contact"]');
+
+// Add a click event listener to the "Contact" link
+contactLink.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default link behavior
+    contactSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the "Contact" section
+});
+        </script> 
+</body>
+</html>
